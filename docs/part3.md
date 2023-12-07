@@ -4,7 +4,7 @@
 
 - **Recap: Merge** Merging combines changes from different branches into a single branch, typically changes are merged into the `main` branch.
 
-![git branching and merging visualised](../assets/git_branches_merging_not_mine.png)
+![git branching and merging visualized](assets/git_branches_merging_not_mine.png)
 <sub><sup>Image taken from coderefinery: https://coderefinery.github.io/git-intro/branches/ </sup></sub>
 
 ---
@@ -37,24 +37,79 @@ If you now run `git branch` again, you'll now see we're working in the `new-feat
 
 
 Tip: you can combine the creation of a new branch and swapping to the branch is a single step:
+
 ```
 git checkout -b new-feature main
 ```
 
 ---
 
-## Part 3.2, Make some commits in the new branch and merge them. 
+## Part 3.2, Make a Commit in the New Branch and Merge them. 
+
+Add a new file and commit this file to the new branch. 
+
+Tip: Make sure you're working in the `new-feature` branch, you can check by typing: `git branch`.
+
+Once you've made the commit, we first swap back to the `main` branch:
+
+```
+git checkout main
+```
+
+Then we merge the `new-feature` branch into the `main` branch: 
+
+```
+git merge new-feature
+```
+
+At this point you should see the new file you created inside the main branch. You can also safely delete the `new-feature` branch (recommended, otherwise you'll end up with a large number of branches after a while which can be confusing).
+
+```
+git branch -d new-feature
+```
+
+If you run `git branch` now you should see the `new-feature` branch no longer exists. 
 
 
 ---
 
-## Part 3.3, TODO.
+## Part 3.3, Merge Two Branches Using a GitHub Pull Request
+
+Now we'll repeat essentially the same process but this time instead of using the merge command in Git, we'll use (GitHub's pull request)[] feature instead.
+
+1. Create the new branch and switch to it: 
+
+```
+git checkout -b new-feature-pull main
+```
+
+2. Add a new file, commit the file, making sure you're in the `new-feature-pull` repository. 
+
+3. Push the new file to the remote repository. 
+
+Note that if we try to use just `git push` it wont work, instead we'll need to do:
+
+```
+git push -u origin new-feature-pull
+```
+
+It's not important right now to understand but the `-u` is short for `--set-upstream` option, which essentially sets up our `git pull` or `git push` commands for this new branch.
+
+Now head over to GitHub and go to the main page of your repository, where you should see a message like this:
+![pull request option showing up on GitHub](assets/git_pull_request_appear.png)
+
+If we click to "compare and pull" we can start the pull request process. 
+
+This is best shown on the board, so I'll show this at the time and we can follow along. To revise the topic later on you can (click here for a nice guide/tutorial)[https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request]
 
 
+Once the pull request is successful we can go ahead and delete the old branch, you could do this on Git (as we saw in Part 3.2) or on GitHub. 
 
 ---
 
-## Part 3.4, TODO.
+## Part 3.4, Merge Conflicts
+
+So far we've seen examples of merges where the changes made don't create conflicts. But sometimes life is not that easy. 
 
 
 ---
@@ -67,23 +122,3 @@ git checkout -b new-feature main
 
 ## Appendix
 
-### Practical Tips:
-
-- Where do I store my projects? I have a folder called projects close to the root folder of my pc (TODO add pic). All projects get there own folder and I clone them to here.
-
-- [Undoing things tutorial](ttps://git-scm.com/book/en/v2/Git-Basics-Undoing-Things)
-
-- Use GitHub or something like VSCode to create your initial repository rather than Git directly. This will give you the chance to add things like .gitignore files and a License file.
-
-- Use a .gitignore file to handle large data files or sensitive information you don't want to include. (As we saw, these can be created automatically when you make a repository with GitHub or VSCode, with good defaults for a project involving for example: python or R).
-
-- Commit regularly, it will make your life easier. 
-
-
-### Other Ways to Share Research Data
-- Raw research data, associated with a paper, especially large data files are probably better shared using a service like [Zenodo](https://zenodo.org/).
-- There is nothing wrong with having both a GitHub repository and a Zenodo page for your project.
-
-
-### GitHub Alternatives
-As you hopefully now appreciate, you don't need to use GitHub to make use of Git. Alternative places to host remote repositories include for example [bitbucket](https://bitbucket.org/product/) and [GitLab](https://about.gitlab.com/) and they tend to offer very similar functionality.
