@@ -1,5 +1,5 @@
 
-As we have now seen in [the powerpoint](TODO - add link), Git is a version control system used to track changes in source code (or other files). It enables multiple people to work on the same project simultaneously and (somewhat) independently.s
+As we have now seen in [the powerpoint](TODO - add link), Git is a version control system used to track changes in source code (or other files). It enables multiple people to work on the same project simultaneously and (somewhat) independently.
 
 
 ## Part 1.1 - Install Git and Create a GitHub Account
@@ -35,7 +35,7 @@ Set the default text editor to use with git. You'll make use of this text editor
 git config --global core.editor "[your text editor here] -w"
 ```
 
-[By adding the `-w` flag we tell Git to wait for the code editor to force Git to wait for you to write your commit message that you would type on your custom editor.](https://stackoverflow.com/questions/9725160/aborting-commit-due-to-empty-commit-message#:~:text=When%20you%20set%20an%20editor%20in%20the%20configuration%20of%20Git%2C%20make%20sure%20to%20pass%20the%20parameter%20%22%2Dw%22%20to%20force%20Git%20to%20wait%20your%20commit%20message%20that%20you%20would%20type%20on%20your%20custom%20editor.)
+[By adding the `-w` flag we tell Git to wait for you to write your commit message in your code editor.](https://stackoverflow.com/questions/9725160/aborting-commit-due-to-empty-commit-message#:~:text=When%20you%20set%20an%20editor%20in%20the%20configuration%20of%20Git%2C%20make%20sure%20to%20pass%20the%20parameter%20%22%2Dw%22%20to%20force%20Git%20to%20wait%20your%20commit%20message%20that%20you%20would%20type%20on%20your%20custom%20editor.)
 
 **You can confirm these commands worked by doing:**
 
@@ -66,7 +66,7 @@ git status
 
 This command gives a report on the current status of our repository. Think back to the picture we saw in the presentation:
 
-![3 stages of git committing](../assets/git_repo_3_stages_not_mine.png)
+![3 stages of git committing](assets/git_repo_3_stages_not_mine.png)
 <sub><sup>Image from the Pro Git Book: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F</sup></sub>
 
 The git status command will tell us where our different files are at in these steps. Of course, right now we have no files.
@@ -81,18 +81,27 @@ Run the ```git status``` command again, what's changed?
 
 Go one step further and stage the change using "git add":
 
-```git add the_best_programming_language.txt```
+```
+git add the_best_programming_language.txt
+```
 
 Now run the ```git status``` command again, what stage is the file at now?
 
 Finally, lets commit the file using:
-```git commit```
-or
-```git commit -m "Added a file on the best programming language in the world" ```
 
-The -m stands for message, and is the message you write to explain your commit,(i.e., what files have you added and what have you done with them).
+```
+git commit
+```
 
-What do you see now if you run git status one more time?
+Or
+
+```
+git commit -m "Added a file on the best programming language in the world" 
+```
+
+The -m stands for message, and is the message you write to explain your commit, (i.e., what files have you added and what have you done with them).
+
+- What do you see now if you run git status one more time?
 
 **Recap: the commands we've seen so far are:**
 
@@ -138,7 +147,7 @@ Change performed because prior color palette was bad for color blind people.
 Some other useful thing to know for someone else/future you. 
 ```
 
-The top line is the title of the commit and should provide a quick summary. Then there is a blank line before the message body which provides more details if useful (some commits don't need a body). You don't need to include things like the file names of files you changed as it's already stored in the commit, see for example: ```git log --stat```.
+The top line is the title of the commit and should provide a quick summary. Then there is a blank line before the message body which provides more details if useful (some commits don't need a body). You don't need to include things like the names of the files you've changed as it's already stored in the commit, see for example: ```git log --stat```.
 
 [You can read more about good commit messages here.](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53)
 

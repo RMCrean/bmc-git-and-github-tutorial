@@ -118,7 +118,7 @@ So far we've seen examples of merges where the changes made don't create conflic
 
 
 
----
 
-## Appendix
+
+
 

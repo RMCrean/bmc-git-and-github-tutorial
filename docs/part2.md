@@ -16,7 +16,7 @@ Now use github to make a new repository, make sure to add a README file, .gitign
 
 
 Once made, it should look like something like this:
-![created repo](../assets/git_example_created_repo.png)
+![created repo](assets/git_example_created_repo.png)
 
 Note that we can upload files and edit files directly with GitHub.
 
@@ -29,7 +29,7 @@ We'll update the README with some more text. Click on the README file and then c
 
 The README file is a [markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) file, with extension ".md". This allows you to easily format the document, [see this GitHub guide on markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). Fun fact, The document you're reading right now was written in markdown.
 
-**Task:** Update the README on GitHub with some markdown formatted content, include things like some bullet points, an extra title and some texts in bold.
+**Task:** Update the README on GitHub with some markdown formatted content, include things like some bullet points, an extra title and some text in bold. [Use this markdown guide from GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) to help you if you don't know the syntax. 
 
 **Tip:** Regularly swap between the edit and preview modes to check you're formatting correctly.
 
@@ -41,7 +41,7 @@ As we covered in the powerpoint, the GitHub repository is a "remote" version of 
 
 To make a local copy we'll need to clone it. Use the SSH option that we setup in Part 2.1
 
-![git clone location on GitHub](../assets/git_clone_option.png)
+![git clone location on GitHub](assets/git_clone_option.png)
 
 Then in a terminal do:
 
@@ -51,7 +51,7 @@ cd test-repo
 ls -alh
 ```
 
-If you get a error about SSH keys not being setup, go back to the tutorial on 2.1 and make sure it is setup correctly.
+If you get a error about SSH keys not being setup, go back to the tutorial on Step 2.1 and make sure it is setup correctly (ask for help if unsure).
 By running the `ls -alh` command we can see the files in this newly created folder include a `.git` folder. We can also run a `git status` command to see the current state of the repository.
 
 Finally if we run the command:
@@ -90,11 +90,17 @@ Go take a look at the repository on GitHub, you should see the new changes now a
 
 ---
 
-## Part 2.6, Make a Remote Commit and "Pull" to update the Local Repository
+## Part 2.6, Make a Remote Commit and "Pull" to Update the Local Repository
 
 Now lets do the reverse. Go to main page of your new GitHub repo and click on add file and either upload or add a new file directly.
 
-Now if we run `git status` in our local repository it should say we are 1 commit behind, but instead we see:
+Now if we run `git status` in our local repository it should say we are 1 commit behind, but instead what do we see?
+
+<details markdown="1">
+ <summary>Spoiler</summary>
+We see we're up to date. So the changes on the remote aren't yet known about on our local repository.
+</details>
+
 
 To check for changes on the remote repository we need to first run:
 
