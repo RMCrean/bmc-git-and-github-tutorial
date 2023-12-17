@@ -14,8 +14,11 @@
 
 ---
 
+
 ## Other Ways to Share Research Data
+
 - Raw research data, associated with a paper, especially large data files are probably better shared using a service like [Zenodo](https://zenodo.org/).
+
 - There is nothing wrong with having both a GitHub and Zenodo repository for your project.
 
 ---

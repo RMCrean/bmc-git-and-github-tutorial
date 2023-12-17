@@ -1,8 +1,8 @@
 ## Hands on Session - Part 3, Branches and Merging
 
-- **Recap: Branch** Branching lets you have different versions of a repository at one time. By default, your repository has one branch named `main` (sometimes called `master` instead) that is considered to be the definitive/central branch. Typically a new branch is used to work on new features or bug fixes without affecting the main codebase until you are ready to merge the changes.
+- **Branch** Branching lets you have different versions of a repository at one time. By default, your repository has one branch named `main` (sometimes called `master` instead) that is considered to be the definitive/central branch. Typically a new branch is used to work on new features or bug fixes without affecting the main codebase until you are ready to merge the changes.
 
-- **Recap: Merge** Merging combines changes from different branches into a single branch, typically changes are merged into the `main` branch.
+- **Merge** Merging combines changes from different branches into a single branch, typically changes are merged into the `main` branch.
 
 ![git branching and merging visualized](assets/git_branches_merging_not_mine.png)
 <sub><sup>Image taken from coderefinery: https://coderefinery.github.io/git-intro/branches/ </sup></sub>
@@ -75,7 +75,7 @@ If you run `git branch` now you should see the `new-feature` branch no longer ex
 
 ## Part 3.3, Merge Two Branches Using a GitHub Pull Request
 
-Now we'll repeat essentially the same process but this time instead of using the merge command in Git, we'll use (GitHub's pull request)[] feature instead.
+Now we'll repeat essentially the same process but this time instead of using the merge command in Git, we'll use [GitHub's pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) feature instead.
 
 1. Create the new branch and switch to it: 
 
@@ -100,21 +100,21 @@ Now head over to GitHub and go to the main page of your repository, where you sh
 
 If we click to "compare and pull" we can start the pull request process. 
 
-This is best shown on the board, so I'll show this at the time and we can follow along. To revise the topic later on you can (click here for a nice guide/tutorial)[https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request]
+This is best shown on the board, so I'll show this at the time and we can follow along. To revise the topic later on you can [click here for a nice guide/tutorial](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
 
 Once the pull request is successful we can go ahead and delete the old branch, you could do this on Git (as we saw in Part 3.2) or on GitHub. 
 
----
-
-## Part 3.4, Merge Conflicts
-
-So far we've seen examples of merges where the changes made don't create conflicts. But sometimes life is not that easy. 
-
+This is typically how you merge branches when working with others. You can also use this method when working alone. 
 
 ---
 
-## Part 3.5, TODO.
+
+
+## End of Session
+
+We've now gone through the basics of Git and GitHub. Several topics weren't covered in this session. Including dealing with [merge conflicts](https://coderefinery.github.io/git-intro/conflicts/) and how to [undo things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things). That said, you should have enough to get started. See the Intro and Appendix for some good sources to learn from.  
+
 
 
 

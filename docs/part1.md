@@ -1,5 +1,5 @@
 
-As we have now seen in [the powerpoint](TODO - add link), Git is a version control system used to track changes in source code (or other files). It enables multiple people to work on the same project simultaneously and (somewhat) independently.
+As we have now seen in [the powerpoint](https://raw.githubusercontent.com/RMCrean/bmc-git-and-github-tutorial/main/bmc_git_github_intro.pptx), Git is a version control system used to track changes in source code (or other files). It enables multiple people to work on the same project simultaneously and (somewhat) independently.
 
 
 ## Part 1.1 - Install Git and Create a GitHub Account
