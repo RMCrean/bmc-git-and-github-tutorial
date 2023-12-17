@@ -8,7 +8,7 @@ In this mini session we'll go through the basics of Git and GitHub.
 
 ## During the tutorial we'll switch back and forth between
 
-1. [A powerpoint presentation](https://raw.githubusercontent.com/RMCrean/bmc-git-and-github-tutorial/main/bmc_git_github_intro.pptx).
+1. [A powerpoint presentation](https://raw.githubusercontent.com/RMCrean/bmc-git-and-github-tutorial/main/bmc_git_github_intro.pdf).
 2. [A hands on session where we can refer to this document for tips and some code blocks that we can copy-paste.](https://rmcrean.github.io/bmc-git-and-github-tutorial/)
 
 We'll begin with the powerpoint.
